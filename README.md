@@ -23,6 +23,11 @@ Additionally, a sentiment analysis segement to analyze guest experience through 
 
 ## Neighbourhood Analysis
 
+Dashboard Demo:
+
+![Dashboard Demo](neighbourhood_db.gif)
+
+C:\Users\ASUS\OneDrive - Singapore Management University\Documents\AIRBNB\gif\neighbourhood_db.gif
 
 Which are the neighbourhoods with above median prices and among these
 ![Alt text](image.png)
