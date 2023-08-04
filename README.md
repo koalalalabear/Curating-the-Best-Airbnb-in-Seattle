@@ -46,8 +46,8 @@ Lastly, based on the the dashboard, reasonable prices to charge is between $72 t
 A correlation test against price was conducted. It shows that the number of people a listing accomodates is highly correlated with price. Digging deeper to understand how the number of people a listing accomodates, we see that the average price peaks when there are 11 people to accomodate and dips at 15.
 
 <div style="display: flex; flex-direction: row;">
-    <img src="./price_correlation.png" alt="Western side" width="350" />
-    <img src="./accomodationcap_vsprice.png" alt="Others" width="350" />
+    <img src="./price_correlation.png" alt="Western side" width="50%" />
+    <img src="./accomodationcap_vsprice.png" alt="Others" width="50%" />
 </div>
 
 
