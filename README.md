@@ -32,8 +32,8 @@ The first revelation is that neighbourhoods that with above median prices are ty
 
 
 <div style="display: flex; flex-direction: row;">
-    <img src="./nbh above med.png" alt="Western side" width="200" />
-    <img src="./nbh under med.png" alt="Others" width="200" />
+    <img src="./nbh above med.png" alt="Western side" width="500" />
+    <img src="./nbh under med.png" alt="Others" width="500" />
 </div>
 
 Next, investigations will delve deeper into the behaviour of the market across time. Excluding 2016 due to the lack of data, between 2014 to 2015 it seems like every neighbourhood has been experiencing falling prices along with an increase in quantity listings except for Magnolia, Beacon Hill, Lake City and Other Neighbourhoods. 
@@ -46,8 +46,8 @@ Lastly, based on the the dashboard, reasonable prices to charge is between $72 t
 A correlation test against price was conducted. It shows that the number of people a listing accomodates is highly correlated with price. Digging deeper to understand how the number of people a listing accomodates, we see that the average price peaks when there are 11 people to accomodate and dips at 15.
 
 <div style="display: flex; flex-direction: row;">
-    <img src="./price_correlation.png" alt="Western side" width="200" />
-    <img src="./accomodationcap_vsprice.png" alt="Others" width="200" />
+    <img src="./price_correlation.png" alt="Western side" width="350" />
+    <img src="./accomodationcap_vsprice.png" alt="Others" width="350" />
 </div>
 
 
@@ -59,10 +59,7 @@ Dashboard Demo:
 
  - Downtown has the most number of attractions near its listings.
  - Neighbourhoods with a higher concentration of listings within 480m are Cascade, Downtown and University District. It may be interesting to note that within Cascade, there's a listing with 300 attractions within p-distance of 300m.
-![Alt text](attractiondensity.png)
  - This visualization is a good tool to use as a benchmark to see how the location of a listing compares with other listings within a neighbourhood.
-
-Returning to the previous question of why do some listings have such high prices, one of the reasons is due to the number of bedrooms and accomodations. Based on this 
 
 
 
