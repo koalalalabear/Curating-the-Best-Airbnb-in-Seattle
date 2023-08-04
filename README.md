@@ -32,8 +32,12 @@ The first revelation is that neighbourhoods that with above median prices are ty
 
 
 <div style="display: flex; flex-direction: row;">
-    <img src="./nbh above med.png" alt="Western side" width="500" />
-    <img src="./nbh under med.png" alt="Others" width="500" />
+    <div style="width: 50%; height: 300px; overflow: hidden;">
+        <img src="./nbh_above_med.png" alt="Western side" style="width: 100%; object-fit: cover;">
+    </div>
+    <div style="width: 50%; height: 300px; overflow: hidden;">
+        <img src="./nbh_under_med.png" alt="Others" style="width: 100%; object-fit: cover;">
+    </div>
 </div>
 
 Next, investigations will delve deeper into the behaviour of the market across time. Excluding 2016 due to the lack of data, between 2014 to 2015 it seems like every neighbourhood has been experiencing falling prices along with an increase in quantity listings except for Magnolia, Beacon Hill, Lake City and Other Neighbourhoods. 
@@ -46,8 +50,8 @@ Lastly, based on the the dashboard, reasonable prices to charge is between $72 t
 A correlation test against price was conducted. It shows that the number of people a listing accomodates is highly correlated with price. Digging deeper to understand how the number of people a listing accomodates, we see that the average price peaks when there are 11 people to accomodate and dips at 15.
 
 <div style="display: flex; flex-direction: row;">
-    <img src="./price_correlation.png" alt="Western side" width="50%" />
-    <img src="./accomodationcap_vsprice.png" alt="Others" width="50%" />
+    <img src="./price_correlation.png" alt="correlation" width="50%" />
+    <img src="./accomodationcap_vsprice.png" alt="accomodation distribution" width="50%" />
 </div>
 
 
