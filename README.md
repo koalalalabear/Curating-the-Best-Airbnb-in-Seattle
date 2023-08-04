@@ -54,7 +54,7 @@ A correlation test against price was conducted. It shows that the number of peop
 ## Geospatial Analysis:
 The objective of this dashboard was to understand the relationships between attractions and listings in different neighbourhood. 
 
-Dashboard Demo:
+Dashboard Demo Part 1:
 ![Geospatial Dashboard Demo](attractions_part1.gif)
 
  - Downtown has the most number of attractions near its listings.
@@ -62,7 +62,7 @@ Dashboard Demo:
  - This visualization is a good tool to use as a benchmark to see how the location of a listing compares with other listings within a neighbourhood.
 
 
-
+Dashboard Demo Part 2:
 ![Geospatial Dashboard Demo](attractions_part2.gif)
 
 ## Competitor Analysis
@@ -70,7 +70,7 @@ Dashboard Demo:
 
 
 ## Amenities Analysis:
-![Amenities Dashboard Demo](competitor_analysis.gif)
+![Amenities Dashboard Demo](ammenities.gif)
 
 ## Conclusion and Recommendations:
 ...
