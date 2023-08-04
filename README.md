@@ -32,12 +32,8 @@ The first revelation is that neighbourhoods that with above median prices are ty
 
 
 <div style="display: flex; flex-direction: row;">
-    <div style="width: 50%; height: 300px; overflow: hidden;">
-        <img src="./nbh_above_med.png" alt="Western side" style="width: 100%; object-fit: cover;">
-    </div>
-    <div style="width: 50%; height: 300px; overflow: hidden;">
-        <img src="./nbh_under_med.png" alt="Others" style="width: 100%; object-fit: cover;">
-    </div>
+    <img src="./nbh above med.png" alt="Western side" width="500" />
+    <img src="./nbh under med.png" alt="Others" width="500" />
 </div>
 
 Next, investigations will delve deeper into the behaviour of the market across time. Excluding 2016 due to the lack of data, between 2014 to 2015 it seems like every neighbourhood has been experiencing falling prices along with an increase in quantity listings except for Magnolia, Beacon Hill, Lake City and Other Neighbourhoods. 
