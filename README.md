@@ -61,11 +61,11 @@ Attractions data extracted from the Foursquare API included other insightful inf
 
 After ranking the neighbourhoods according to respective attraction data based on average rating, popularity and price, it can be seen that attractions in Downtown, Capitol Hill and Ballard dominates accross all boards on popularity, rating and priciest neighbourhoods. Whereas the opposite would be said for attractions in Interbay and Cascade.  
 
-![Alt text](images\attractions_ranked.png)
+![Alt text](images/attractions_ranked.png)
 
 Based on prior travelling experience, a dissapointing situation as a tourist was when an attraction is one where popularity was higher than actual ratings and price was high. I engineered a new feature to capture this situation by taking the difference of popularity and rating for each attraction. Since dissapointment is also a product of price, this difference is also multiplied by the Price. After data preparation like min max scaling and replacing the 0s in price with 1, now we can clearly see the neighbourhoods with a concentration of dissapointing attractions being Downtown, Capitol Hill and Ballard.
 
-![Alt text](images\disapointmentboxplot.png)
+![Alt text](images/disapointmentboxplot.png)
 
 ## Competitor Analysis
 This segment of the analysis concerns external market conditions, the relationship between CPI and listing prices, property ownership in Seattle's neighborhoods and the impact of time in terms of age and demand.
@@ -76,7 +76,7 @@ Dashboard Demo:
 
 The relationship between age and listing prices was determined with Autocorrelation Function (ACF) after outliers in prices were removed and the data is smoothed with low pass filters. The ACF plot does show a positive correlation between the prices at different lags. This suggests that the prices tend to be similar over time. This may be due to a number of factors, such as the fact that Airbnb listings are often priced based on the same factors, such as the location and amenities of the listing.
 
-![Alt text](images\ACF.png)
+![Alt text](images/ACF.png)
 
 The relationship between CPI and listing prices was determined by the correlation coefficient between Airbnb listing prices and CPI data: 0.009861794181379615. This indicates a very weak linear relationship. That said, a correlation coefficient near 0 does not imply that there is no relationship between the variables; but that the relationship is not well-explained by a linear model. Other complex relationships or factors at play could be missed by the correlation coefficient alone.
 
@@ -87,8 +87,8 @@ The dashboard was created by implementing calculated fields in the scorecard and
 Apart from concentration affecting the supply of AirBnBs in the market, the question of when is the best time to operate an AirBnB came to mind. To determine this, the change in price and number of listings depending on month will be considered. As seen below, listing prices rise significantly from June to September, explainable by the fact that there are less listings available for reservation in summer. There is also a rise in December which shows that people often visit during winter holidays too, although the increase in price is not as large as 70% of listings are on average available in December.
 
 <div style="display: flex; flex-direction: row;">
-    <img src="images\image-1.png" alt="change in qty available" width="500" />
-    <img src="images\image-2.png" alt="change in price" width="500" />
+    <img src="images/image-1.png" alt="change in qty available" width="500" />
+    <img src="images/image-2.png" alt="change in price" width="500" />
 </div>
 
 Lastly, the dashboard also makes use of the simple linear regression model feature in Tableau to check for the significance in relationship between price and age of listings in month for different property types. Results for the apartment property type are as detailed: 
@@ -110,7 +110,7 @@ The dashboard makes use of market basket analysis to identify the amenities that
 
 To identify the amenities that people are willing to pay for, a Chi Square test was conducted. As seen below, kitchen, pool, tv, doorman, heating and gym are ammenities with the highest Chi Square result and p-values. These ammenities seem to be offered in specific property types like how only condominiums have ammenities like doorman, pool and gym.
 
-![Alt text](images\Amenity_chi.png)
+![Alt text](images/Amenity_chi.png)
 
 Knowing that property type influences the ammenities provided and prices, the dashboard makes use of proportional brushing, enabling the user to see the ammenities that contribute the highest to the median priced of the listings of their selected property type. 
 
