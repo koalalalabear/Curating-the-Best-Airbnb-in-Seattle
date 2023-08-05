@@ -26,10 +26,10 @@ Additionally, a sentiment analysis segement to analyze guest experience through 
 The objective of this dashboard was to provide a comprehensive yet broad overview into different neighbourhoods in Seattle. 
 
 Dashboard Demo:
+
 ![Neighbourhoods Dashboard Demo](images\neighbourhood_db.gif)
 
 The first revelation is that neighbourhoods that with above median prices are typically on the western side of Seattle. On the other hand, the cheaper neighbourhoods are on the innerside of the city . 
-
 
 <div style="display: flex; flex-direction: row;">
     <img src="images\nbh above med.png" alt="Western side" width="500" />
@@ -41,7 +41,8 @@ Next, investigations will delve deeper into the behaviour of the market across t
 Since Other Neighbourhoods is a catchall term for listings in neighbourhoods "not recognised" by Airbnb, it is not suprising to be amongst the few cities with the largest variance. However, Magnolia is a "recognised city" like Beacon Hill, Lake City so it is worthwhile invesitgating why the variances  is so large in Magnolia.
 
 Lastly, based on the the dashboard, reasonable prices to charge is between $72 to $150, depending on the neighbourhood. However, since this is more than 100% higher than the lower bound charged across all neighbourhoods as seen below, further research was conducted to understand the reason behind the drastic price differences.
-![Alt text](nbh_lower_bound.png)
+
+![Alt text](images/nbh_lower_bound.png)
 
 A correlation test against price was conducted. It shows that the number of people a listing accomodates is highly correlated with price. Digging deeper to understand how the number of people a listing accomodates, we see that the average price peaks when there are 11 people to accomodate and dips at 15.
 
@@ -59,18 +60,22 @@ Attractions data extracted from the Foursquare API included other insightful inf
 | price       | A numerical value (from 1 to 4) that best describes the pricing tier of the FSQ Place, based on known prices for menu items and other offerings. Values include: 1 = Cheap, 2 = Moderate, 3 = Expensive, and 4 = Very Expensive. |
 
 After ranking the neighbourhoods according to respective attraction data based on average rating, popularity and price, it can be seen that attractions in Downtown, Capitol Hill and Ballard dominates accross all boards on popularity, rating and priciest neighbourhoods. Whereas the opposite would be said for attractions in Interbay and Cascade.  
+
 ![Alt text](images\attractions_ranked.png)
 
 Based on prior travelling experience, a dissapointing situation as a tourist was when an attraction is one where popularity was higher than actual ratings and price was high. I engineered a new feature to capture this situation by taking the difference of popularity and rating for each attraction. Since dissapointment is also a product of price, this difference is also multiplied by the Price. After data preparation like min max scaling and replacing the 0s in price with 1, now we can clearly see the neighbourhoods with a concentration of dissapointing attractions being Downtown, Capitol Hill and Ballard.
+
 ![Alt text](images\disapointmentboxplot.png)
 
 ## Competitor Analysis
 This segment of the analysis concerns external market conditions, the relationship between CPI and listing prices, property ownership in Seattle's neighborhoods and the impact of time in terms of age and demand.
 
 Dashboard Demo:
+
 ![Competitor Dashboard Demo](images\competitor_analysis.gif)
 
 The relationship between age and listing prices was determined with Autocorrelation Function (ACF) after outliers in prices were removed and the data is smoothed with low pass filters. The ACF plot does show a positive correlation between the prices at different lags. This suggests that the prices tend to be similar over time. This may be due to a number of factors, such as the fact that Airbnb listings are often priced based on the same factors, such as the location and amenities of the listing.
+
 ![Alt text](images\ACF.png)
 
 The relationship between CPI and listing prices was determined by the correlation coefficient between Airbnb listing prices and CPI data: 0.009861794181379615. This indicates a very weak linear relationship. That said, a correlation coefficient near 0 does not imply that there is no relationship between the variables; but that the relationship is not well-explained by a linear model. Other complex relationships or factors at play could be missed by the correlation coefficient alone.
@@ -96,6 +101,7 @@ Lastly, the dashboard also makes use of the simple linear regression model featu
 ## Amenities Analysis:
 
 Dashboard Demo:
+
 ![Amenities Dashboard Demo](images\ammenities.gif)
 
 The objective of the amenitites dashboard was to identify the amenities that are most frequently offered, detect patterns in ammenities offered, highlight those that people are willing to pay for and understand roughly how much more it is that they are willing to pay.
@@ -103,6 +109,7 @@ The objective of the amenitites dashboard was to identify the amenities that are
 The dashboard makes use of market basket analysis to identify the amenities that are most frequently offered and detect ammenities often offered in conjuction. This visualization makes use of sets, calculated fields and association rules.
 
 To identify the amenities that people are willing to pay for, a Chi Square test was conducted. As seen below, kitchen, pool, tv, doorman, heating and gym are ammenities with the highest Chi Square result and p-values. These ammenities seem to be offered in specific property types like how only condominiums have ammenities like doorman, pool and gym.
+
 ![Alt text](images\Amenity_chi.png)
 
 Knowing that property type influences the ammenities provided and prices, the dashboard makes use of proportional brushing, enabling the user to see the ammenities that contribute the highest to the median priced of the listings of their selected property type. 
