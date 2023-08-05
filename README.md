@@ -1,10 +1,10 @@
 # Creating-the-Best-Airbnb-in-Seattle
-Interactive Visualization : https://public.tableau.com/app/profile/nahyy4315/viz/CuratingthebestairbnbinSeattle/Geospatialanalysis 
+[interactive visualization tool](https://public.tableau.com/app/profile/nahyy4315/viz/CuratingthebestairbnbinSeattle/Geospatialanalysis)
 (please hover over the parts of the viz which might not be displaying properly due to versioning incompatibilities)
 
 
 ## Introduction
-Running an Airbnb has always fascinated me as a source of side income, and Seattle's vibrant atmosphere and proximity to nature further piqued my interest. This led to the motivation behind this project: to gain a comprehensive understanding of the Airbnb market in the city. The primary objective of this data analytics project is to analyze the Airbnb market in Seattle and provide valuable insights for potential hosts and travelers.
+Running an Airbnb has always fascinated me, and Seattle's vibrant atmosphere and proximity to nature further piqued my interest. This led to the motivation behind this project: to gain a comprehensive understanding of the Airbnb market in the city. The primary objective of this data analytics project is to analyze the Airbnb market in Seattle and provide valuable insights for potential hosts and travelers.
 
 The project will leverage data from Airbnb listings, along with external datasets, to create an [interactive visualization tool](https://public.tableau.com/app/profile/nahyy4315/viz/CuratingthebestairbnbinSeattle/Geospatialanalysis) that offers insights into the following aspects of Airbnb rentals in Seattle:
 
@@ -47,30 +47,71 @@ A correlation test against price was conducted. It shows that the number of peop
 
 <div style="display: flex; flex-direction: row;">
     <img src="./price_correlation.png" alt="correlation" width="50%" />
-    <img src="./accomodationcap_vsprice.png" alt="accomodation distribution" width="50%" />
+    <img src="./accom_price_correlation.png" alt="accomodation distribution" width="50%" />
 </div>
 
-
 ## Geospatial Analysis:
-The objective of this dashboard was to understand the relationships between attractions and listings in different neighbourhood. 
+Attractions data extracted from the Foursquare API included other insightful information like:  
+| Field       | Description                                                                                                             |
+|-------------|-------------------------------------------------------------------------------------------------------------------------|
+| rating      | A numerical rating (from 0.0 to 10.0) of the FSQ Place, based on user votes, likes/dislikes, tips sentiment, and visit data. Not all FSQ Places will have a rating. |
+| popularity  | Measure of the FSQ Place's popularity, by foot traffic. This score is on a 0 to 1 scale and uses a 6-month span of POI visits for a given geographic area.   |
+| price       | A numerical value (from 1 to 4) that best describes the pricing tier of the FSQ Place, based on known prices for menu items and other offerings. Values include: 1 = Cheap, 2 = Moderate, 3 = Expensive, and 4 = Very Expensive. |
 
-Dashboard Demo Part 1:
-![Geospatial Dashboard Demo](attractions_part1.gif)
+After ranking the neighbourhoods according to respective attraction data based on average rating, popularity and price, it can be seen that attractions in Downtown, Capitol Hill and Ballard dominates accross all boards on popularity, rating and priciest neighbourhoods. Whereas the opposite would be said for attractions in Interbay and Cascade.  
+![Alt text](attractions_ranked.png)
 
- - Downtown has the most number of attractions near its listings.
- - Neighbourhoods with a higher concentration of listings within 480m are Cascade, Downtown and University District. It may be interesting to note that within Cascade, there's a listing with 300 attractions within p-distance of 300m.
- - This visualization is a good tool to use as a benchmark to see how the location of a listing compares with other listings within a neighbourhood.
-
-
-Dashboard Demo Part 2:
-![Geospatial Dashboard Demo](attractions_part2.gif)
+Based on prior travelling experience, a dissapointing situation as a tourist was when an attraction is one where popularity was higher than actual ratings and price was high. I engineered a new feature to capture this situation by taking the difference of popularity and rating for each attraction. Since dissapointment is also a product of price, this difference is also multiplied by the Price. After data preparation like min max scaling and replacing the 0s in price with 1, now we can clearly see the neighbourhoods with a concentration of dissapointing attractions being Downtown, Capitol Hill and Ballard.
+![Alt text](disapointmentboxplot.png)
 
 ## Competitor Analysis
+This segment of the analysis concerns external market conditions, the relationship between CPI and listing prices, property ownership in Seattle's neighborhoods and the impact of time in terms of age and demand.
+
+Dashboard Demo:
 ![Competitor Dashboard Demo](competitor_analysis.gif)
+
+The relationship between age and listing prices was determined with Autocorrelation Function (ACF) after outliers in prices were removed and the data is smoothed with low pass filters. The ACF plot does show a positive correlation between the prices at different lags. This suggests that the prices tend to be similar over time. This may be due to a number of factors, such as the fact that Airbnb listings are often priced based on the same factors, such as the location and amenities of the listing.
+![Alt text](ACF.png)
+
+The relationship between CPI and listing prices was determined by the correlation coefficient between Airbnb listing prices and CPI data: 0.009861794181379615. This indicates a very weak linear relationship. That said, a correlation coefficient near 0 does not imply that there is no relationship between the variables; but that the relationship is not well-explained by a linear model. Other complex relationships or factors at play could be missed by the correlation coefficient alone.
+
+Concentration of property ownership in Seattle's neighborhoods impacts Airbnb operations in several ways: by influencing property supply and competition, which directly affects profitability. Additionally, the significant presence of Airbnb businesses may reduce available long-term rental units, unlocking a new market with alternative pricing strategies to explore. 
+
+The dashboard was created by implementing calculated fields in the scorecard and set actions to link the table to the scorecard. This allows the user to interact with the neighbourhood in the table to see the percentage of hosts with more than 10 listings (within Seattle) to their names and the proportion of listings in the neighbourhood that they collectively own. The insight gleaned from this is that the concentration of ownership is the highest in University District. 7.81% of hosts in University District own more than 10 listings. In total, the listings they own make up 45% of listings within University District.
+
+Apart from concentration affecting the supply of AirBnBs in the market, the question of when is the best time to operate an AirBnB came to mind. To determine this, the change in price and number of listings depending on month will be considered. As seen below, listing prices rise significantly from June to September, explainable by the fact that there are less listings available for reservation in summer. There is also a rise in December which shows that people often visit during winter holidays too, although the increase in price is not as large as 70% of listings are on average available in December.
+
+<div style="display: flex; flex-direction: row;">
+    <img src="./image-1.png" alt="change in qty available" width="500" />
+    <img src="./image-2.png" alt="change in price" width="500" />
+</div>
+
+Lastly, the dashboard also makes use of the simple linear regression model feature in Tableau to check for the significance in relationship between price and age of listings in month for different property types. Results for the apartment property type are as detailed: 
+    1. the R-squared is approximately 0.0006662, which is a very low value, It suggests that there is a weak or almost negligible linear relationship as changes in the number of months between first and last listings do not lead to significant changes in the price of listings.
+    2. the model's predictions may not be very precise as, predicted prices from the regression model deviate from the actual prices by around 78.785 units. 
+    3. p-value less than 0.0001 indicates that the results are statistically significant at a very high level of confidence. 
+    While the low p-value indicates that there is a statistically significant relationship between months and price, the extremely low R-squared value suggests that this relationship is practically insignificant. In other words, while the model shows that there is a statistical association between months and price, this association is so weak that it has very little practical relevance or explanatory power.  
 
 
 ## Amenities Analysis:
+
+Dashboard Demo:
 ![Amenities Dashboard Demo](ammenities.gif)
+
+The objective of the amenitites dashboard was to identify the amenities that are most frequently offered, detect patterns in ammenities offered, highlight those that people are willing to pay for and understand roughly how much more it is that they are willing to pay.
+
+The dashboard makes use of market basket analysis to identify the amenities that are most frequently offered and detect ammenities often offered in conjuction. This visualization makes use of sets, calculated fields and association rules.
+
+To identify the amenities that people are willing to pay for, a Chi Square test was conducted. As seen below, kitchen, pool, tv, doorman, heating and gym are ammenities with the highest Chi Square result and p-values. These ammenities seem to be offered in specific property types like how only condominiums have ammenities like doorman, pool and gym.
+![Alt text](Amenity_chi.png)
+
+Knowing that property type influences the ammenities provided and prices, the dashboard makes use of proportional brushing, enabling the user to see the ammenities that contribute the highest to the median priced of the listings of their selected property type. 
+
+<!-- Relationship between doorman - condos and safety? -->
+
+
+
+
 
 ## Conclusion and Recommendations:
 ...
