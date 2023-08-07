@@ -44,12 +44,13 @@ Lastly, based on the the dashboard, reasonable prices to charge is between $72 t
 
 ![Alt text](images/nbh_lower_bound.png)
 
-A correlation test against price was conducted. It shows that the number of people a listing accomodates is highly correlated with price. Digging deeper to understand how the number of people a listing accomodates, we see that the average price peaks when there are 11 people to accomodate and dips at 15.
+A correlation test against price was conducted. It shows that the number of people a listing accomodates is highly correlated with price.
 
-<div style="display: flex; flex-direction: row;">
-    <img src="images/price_correlation.png" alt="correlation" width="50%" />
-    <img src="images/accom_price_correlation.png" alt="accommodation distribution" width="50%" />
-</div>
+<img src="images/price_correlation.png" alt="correlation">
+
+Digging deeper to understand how the number of people a listing accomodates, we see that the average price peaks when there are 11 people to accomodate and dips at 15.
+
+<img src="images/accom_price_correlation.png" alt="accommodation distribution">
 
 ## Geospatial Analysis:
 Attractions data extracted from the Foursquare API included other insightful information like:  
@@ -92,10 +93,11 @@ Apart from concentration affecting the supply of AirBnBs in the market, the ques
 </div>
 
 Lastly, the dashboard also makes use of the simple linear regression model feature in Tableau to check for the significance in relationship between price and age of listings in month for different property types. Results for the apartment property type are as detailed: 
-    1. the R-squared is approximately 0.0006662, which is a very low value, It suggests that there is a weak or almost negligible linear relationship as changes in the number of months between first and last listings do not lead to significant changes in the price of listings.
-    2. the model's predictions may not be very precise as, predicted prices from the regression model deviate from the actual prices by around 78.785 units. 
-    3. p-value less than 0.0001 indicates that the results are statistically significant at a very high level of confidence. 
-    While the low p-value indicates that there is a statistically significant relationship between months and price, the extremely low R-squared value suggests that this relationship is practically insignificant. In other words, while the model shows that there is a statistical association between months and price, this association is so weak that it has very little practical relevance or explanatory power.  
+
+1. the R-squared is approximately 0.0006662, which is a very low value, It suggests that there is a weak or almost negligible linear relationship as changes in the number of months between first and last listings do not lead to significant changes in the price of listings.
+2. the model's predictions may not be very precise as, predicted prices from the regression model deviate from the actual prices by around 78.785 units. 
+3. p-value less than 0.0001 indicates that the results are statistically significant at a very high level of confidence. 
+While the low p-value indicates that there is a statistically significant relationship between months and price, the extremely low R-squared value suggests that this relationship is practically insignificant. In other words, while the model shows that there is a statistical association between months and price, this association is so weak that it has very little practical relevance or explanatory power.  
 
 
 ## Amenities Analysis:
@@ -107,18 +109,36 @@ The objective of the amenitites dashboard was to identify the amenities that are
 
 The dashboard makes use of market basket analysis to identify the amenities that are most frequently offered and detect ammenities often offered in conjuction. This visualization makes use of sets, calculated fields and association rules.
 
-To identify the amenities that people are willing to pay for, a Chi Square test was conducted. As seen below, kitchen, pool, tv, doorman, heating and gym are ammenities with the highest Chi Square result and p-values. These ammenities seem to be offered in specific property types like how only condominiums have ammenities like doorman, pool and gym.
+The figure below shows the top 2 most frequently offered ammenities are kitchen (12.18%) and heating (12.82%) and they often exist within a listing together,
+![Alt text](images/kitchen_mba.png)
 
+To identify the amenities that people are willing to pay for, a Chi Square test was conducted. As seen below, kitchen, pool, tv, doorman, heating and gym are ammenities with the highest Chi Square result and p-values. These ammenities seem to be offered in specific property types like how only condominiums have ammenities like doorman, pool and gym.
 ![Alt text](images/Amenity_chi.png)
 
-In order to identify the ammenities that contribute the highest to the median price of the selected property, the dashboard makes use of proportional brushing. 
+In order to identify and quantify the impact of ammenities on the median price of a selected property type, the dashboard applies proportional brushing.
 
-<!-- Relationship between doorman - condos and safety? -->
+Taking apartments for example, the visualisation below reveals the different ammenities that contribute to prices. Lisitings with doorman ammenities fetch a median price of $170, those with a pool fetch a median price of $150, those with a gym fetch a median price of $145. These ammenities are rare and non-essentials, reflective of a more luxurious listing. 
+![Alt text](images/ammenities_tiers.png)
 
+On the other hand, apartments with breakfast included have the lowest median prices at $85 an interesting point for futher investigation. The breakdown of listings offering breakfast across neighbourhoods and property types can be seen below. Breakfast is often offered in houses, mostly in Central area and Rainer Valley. Since these neighbourhoods are quite drastic in terms of the number of attractions, it could be interesting to analyze the impact of breakfast on prices. 
 
+<div style="display: flex; flex-direction: row;">
+    <img src="images/breakfast.png" alt="change in qty available" width="500" />
+    <img src="images/attractionsquantityneighbourhood.png" alt="change in price" width="500" />
+</div>
 
+Prices are dividied by the number of people the listing accomodates to isolate prices from the relationship with accomodation. The below histogram visualizing the distribution of prices shows that breakfast is cheaper in Rainer Valley than Capitol Hill, despite Capitol Hill having more attractions and places to visit for breakfast. This shows the demand for breakfasts exists as it actually value adds to the guest experience and guests are willing to pay more for the ammenity. On the other side, breakfast is offered more frequently in cheaper listings in Rainer Hill as 8 listings offering breakfast are the cheapest, meaning that it is offered as a function of convenience due to the lack of attractions nearby. 
+![Alt text](rainervscapitol.png)
 
+## Conclusion and Recommendations
 
-## Conclusion and Recommendations:
-...
+What neighbourhoods to operate in? 
+
+| Shortlisted Neighborhoods | Rationale | Median Prices to Charge |
+|---------------------------|-----------|------------------------|
+| Neighborhood 1            | Reason 1  | $X                     |
+| Neighborhood 2            | Reason 2  | $Y                     |
+| Neighborhood 3            | Reason 3  | $Z                     |
+
+What ammenities to offer?
 
