@@ -113,6 +113,7 @@ The figure below shows the top 2 most frequently offered ammenities are kitchen 
 ![Alt text](images/kitchen_mba.png)
 
 To identify the amenities that people are willing to pay for, a Chi Square test was conducted. As seen below, kitchen, pool, tv, doorman, heating and gym are ammenities with the highest Chi Square result and p-values. These ammenities seem to be offered in specific property types like how only condominiums have ammenities like doorman, pool and gym.
+
 ![Alt text](images/Amenity_chi.png)
 
 In order to identify and quantify the impact of ammenities on the median price of a selected property type, the dashboard applies proportional brushing.
