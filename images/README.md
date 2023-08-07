@@ -128,15 +128,15 @@ On the other hand, apartments with breakfast included have the lowest median pri
 </div>
 
 Prices are dividied by the number of people the listing accomodates to isolate prices from the relationship with accomodation. The below histogram visualizing the distribution of prices shows that breakfast is cheaper in Rainer Valley than Capitol Hill, despite Capitol Hill having more attractions and places to visit for breakfast. This shows the demand for breakfasts exists as it actually value adds to the guest experience and guests are willing to pay more for the ammenity. On the other side, breakfast is offered more frequently in cheaper listings in Rainer Hill as 8 listings offering breakfast are the cheapest, meaning that it is offered as a function of convenience due to the lack of attractions nearby. 
-![Alt text](rainervscapitol.png)
+![Alt text](images/rainervscapitol.png)
 
 ## Conclusion and Recommendations
 
 What neighbourhoods to operate in? 
 
-| Shortlisted Neighborhoods | Rationale | Median Prices to Charge |
+| Shortlisted Neighborhoods | Rationale | Prices to Charge |
 |---------------------------|-----------|------------------------|
-| Neighborhood 1            | Reason 1  | $X                     |
+| Downtown         | Listing prices have been increasing since 2011. The airbnb market has also been growing with more offering their place up for rent. Many attractions all over the city makes it an attractive neighbourhood for tourists. Competition for AirBnB listings seems to be low, with less commercialized hosts.  | Above median price of $150 in the summer and $100 during other seasons          |
 | Neighborhood 2            | Reason 2  | $Y                     |
 | Neighborhood 3            | Reason 3  | $Z                     |
 
