@@ -112,10 +112,10 @@ The dashboard makes use of market basket analysis to identify the amenities that
 The figure below shows the top 2 most frequently offered ammenities are kitchen (12.18%) and heating (12.82%) and they often exist within a listing together,
 ![Alt text](images/kitchen_mba.png)
 
-To identify the amenities that people are willing to pay for, a Chi Square test was conducted. As seen below, kitchen, pool, tv, doorman, heating and gym are ammenities with the highest Chi Square result and p-values.
+To identify the amenities that people are willing to pay for, a Chi Square test was conducted. As seen below, kitchen, pool, tv, doorman, heating and gym are ammenities with the highest Chi Square result and p-values.These ammenities seem to be offered in specific property types like how only condominiums have ammenities like doorman, pool and gym.
+<br>
 ![Alt text](images/Amenity_chi.png)
-These ammenities seem to be offered in specific property types like how only condominiums have ammenities like doorman, pool and gym.
-
+<br>
 In order to identify and quantify the impact of ammenities on the median price of a selected property type, the dashboard applies proportional brushing.
 
 Taking apartments for example, the visualisation below reveals the different ammenities that contribute to prices. Lisitings with doorman ammenities fetch a median price of $170, those with a pool fetch a median price of $150, those with a gym fetch a median price of $145. These ammenities are rare and non-essentials, reflective of a more luxurious listing. 
@@ -128,7 +128,8 @@ On the other hand, apartments with breakfast included have the lowest median pri
     <img src="images/attractionsquantityneighbourhood.png" alt="change in price" width="500" />
 </div>
 
-Prices are dividied by the number of people the listing accomodates to isolate prices from the relationship with accomodation. The below histogram visualizing the distribution of prices shows that breakfast is cheaper in Rainer Valley than Capitol Hill, despite Capitol Hill having more attractions and places to visit for breakfast. This shows the demand for breakfasts exists as it actually value adds to the guest experience and guests are willing to pay more for the ammenity. On the other side, breakfast is offered more frequently in cheaper listings in Rainer Hill as 8 listings offering breakfast are the cheapest, meaning that it is offered as a function of convenience due to the lack of attractions nearby. 
+Prices are dividied by the number of people the listing accomodates to isolate prices from the relationship with accomodation. The below histogram visualizing the distribution of prices shows that breakfast is cheaper in Rainer Valley than Capitol Hill, despite Capitol Hill having more attractions and places to visit for breakfast. This shows the demand for breakfasts exists as it actually value adds to the guest experience and guests are willing to pay more for the ammenity. On the other side, breakfast is offered more frequently in cheaper listings in Rainer Hill as 8 listings offering breakfast are the cheapest, meaning that it is offered as a function of convenience due to the lack of attractions nearby. <br>
+
 ![Alt text](images/rainervscapitol.png)
 
 ## Conclusion and Recommendations
