@@ -27,13 +27,13 @@ The objective of this dashboard was to provide a comprehensive yet broad overvie
 
 Dashboard Demo:
 
-![Neighbourhoods Dashboard Demo](images\neighbourhood_db.gif)
+![Neighbourhoods Dashboard Demo](images/neighbourhood_db.gif)
 
 The first revelation is that neighbourhoods that with above median prices are typically on the western side of Seattle. On the other hand, the cheaper neighbourhoods are on the innerside of the city . 
 
 <div style="display: flex; flex-direction: row;">
-    <img src="images\nbh above med.png" alt="Western side" width="500" />
-    <img src="images\nbh under med.png" alt="Others" width="500" />
+    <img src="images/nbh above med.png" alt="Western side" width="500" />
+    <img src="images/nbh under med.png" alt="Others" width="500" />
 </div>
 
 Next, investigations will delve deeper into the behaviour of the market across time. Excluding 2016 due to the lack of data, between 2014 to 2015 it seems like every neighbourhood has been experiencing falling prices along with an increase in quantity listings except for Magnolia, Beacon Hill, Lake City and Other Neighbourhoods. 
@@ -72,7 +72,7 @@ This segment of the analysis concerns external market conditions, the relationsh
 
 Dashboard Demo:
 
-![Competitor Dashboard Demo](images\competitor_analysis.gif)
+![Competitor Dashboard Demo](images/competitor_analysis.gif)
 
 The relationship between age and listing prices was determined with Autocorrelation Function (ACF) after outliers in prices were removed and the data is smoothed with low pass filters. The ACF plot does show a positive correlation between the prices at different lags. This suggests that the prices tend to be similar over time. This may be due to a number of factors, such as the fact that Airbnb listings are often priced based on the same factors, such as the location and amenities of the listing.
 
@@ -101,8 +101,7 @@ Lastly, the dashboard also makes use of the simple linear regression model featu
 ## Amenities Analysis:
 
 Dashboard Demo:
-
-![Amenities Dashboard Demo](images\ammenities.gif)
+![Amenities Dashboard Demo](images/ammenities.gif)
 
 The objective of the amenitites dashboard was to identify the amenities that are most frequently offered, detect patterns in ammenities offered, highlight those that people are willing to pay for and understand roughly how much more it is that they are willing to pay.
 
@@ -112,7 +111,7 @@ To identify the amenities that people are willing to pay for, a Chi Square test 
 
 ![Alt text](images/Amenity_chi.png)
 
-Knowing that property type influences the ammenities provided and prices, the dashboard makes use of proportional brushing, enabling the user to see the ammenities that contribute the highest to the median priced of the listings of their selected property type. 
+In order to identify the ammenities that contribute the highest to the median price of the selected property, the dashboard makes use of proportional brushing. 
 
 <!-- Relationship between doorman - condos and safety? -->
 
