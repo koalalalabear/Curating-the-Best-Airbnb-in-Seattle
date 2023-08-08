@@ -130,7 +130,7 @@ While the low p-value indicates that there is a statistically significant relati
 ## Amenities Analysis:
 
 ### Dashboard Demo:
-![Amenities Dashboard Demo](images/ammenities.gif)
+![Amenities Dashboard Demo](images/amenities_db.gif)
 
 The objective of the amenitites dashboard was to identify the amenities that are most frequently offered, detect patterns in ammenities offered, highlight those that people are willing to pay for and understand roughly how much more it is that they are willing to pay.
 
