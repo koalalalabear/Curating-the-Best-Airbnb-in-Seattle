@@ -3,38 +3,32 @@
 (please hover over the parts of the viz which might not be displaying properly due to versioning incompatibilities)
 
 ## Contents Page
-
 - [Introduction](#introduction)
   - [Data](#data)
-- [Neighbourhood Analysis](#Neighbourhood-Analysis)
-  - [Dashboard Demo](#Dashboard-Demo)
-  - Dashboard details & analysis into:
-    - Most influential factor impacting price
-    - Relationship between most influential factor and price
-
-- [Geospatial Analysis](#Geospatial-Analysis)
-  - [Dashboard Demo]()
-  - Dashboard details & analysis into:
-    - Neighbourhoods ranked based on price, rating and popularity metrics in foursquare
-    - Dissapointing listings in Neighbourhoods
-          
-- [Competitor Analysis](#Competitor-Analysis)
-  - [Dashboard Demo](#Dashboard-Demo)
-  - Dashboard details & analysis into:
-    - Relationship between age and listing prices with ACF
-    - Relationship between CPI and listing prices
-    - Concentration of property ownership in Neighbourhoods
-    - Best time of the year to operate an AirBnB
-
-- [Amenities Analysis](#Amenities-Analysis)
-  - [Dashboard Demo](#Dashboard-Demo)
-  - Dashboard details & analysis into:
+- [Neighbourhood Analysis](#neighbourhood-analysis)
+  - [Dashboard Demo](#dashboard-demo)
+  - Dashboard Details & Analysis
+    - Most Influential Factor Impacting Price
+    - Relationship Between Most Influential Factor and Price
+- [Geospatial Analysis](#geospatial-analysis)
+  - [Dashboard Demo](#dashboard-demo-1)
+  - Dashboard Details & Analysis
+    - Neighbourhoods Ranked Based on Price, Rating, and Popularity Metrics in Foursquare
+    - Disappointing Listings in Neighbourhoods
+- [Competitor Analysis](#competitor-analysis)
+  - [Dashboard Demo](#dashboard-demo-2)
+  - Dashboard Details & Analysis
+    - Relationship Between Age and Listing Prices with ACF
+    - Relationship Between CPI and Listing Prices
+    - Concentration of Property Ownership in Neighbourhoods
+    - Best Time of the Year to Operate an Airbnb
+- [Amenities Analysis](#amenities-analysis)
+  - [Dashboard Demo](#dashboard-demo-3)
+  - Dashboard Details & Analysis
     - Market Basket Analysis on Amenities Offered
-    - Identify amenities that people are willing to pay and how much more they will pay
-    - How breakfast offerings affects prices in neighbourhood with many attractions vs less attractions 
-
-- [Conclusion and Recommendations](#Conclusion-and-Recommendations)
-
+    - Identify Amenities That People Are Willing to Pay for and How Much More They Will Pay
+    - How Breakfast Offerings Affect Prices in Neighbourhoods with Many Attractions vs. Less Attractions
+- [Conclusion and Recommendations](#conclusion-and-recommendations)
 
 ## Introduction
 Running an Airbnb has always fascinated me, and Seattle's vibrant atmosphere and proximity to nature further piqued my interest. This led to the motivation behind this project: to gain a comprehensive understanding of the Airbnb market in the city. The primary objective of this data analytics project is to analyze the Airbnb market in Seattle and provide valuable insights for potential hosts and travelers.
