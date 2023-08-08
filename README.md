@@ -2,6 +2,39 @@
 [interactive visualization tool](https://public.tableau.com/app/profile/nahyy4315/viz/CuratingthebestairbnbinSeattle/Geospatialanalysis)
 (please hover over the parts of the viz which might not be displaying properly due to versioning incompatibilities)
 
+## Contents Page
+
+- [Introduction](#introduction)
+  - [Data](#data)
+- [Neighbourhood Analysis](#Neighbourhood-Analysis)
+  - [Dashboard Demo](#Dashboard-Demo)
+  - Dashboard details & analysis into:
+    - Most influential factor impacting price
+    - Relationship between most influential factor and price
+
+- [Geospatial Analysis](#Geospatial-Analysis)
+  - [Dashboard Demo]()
+  - Dashboard details & analysis into:
+    - Neighbourhoods ranked based on price, rating and popularity metrics in foursquare
+    - Dissapointing listings in Neighbourhoods
+          
+- [Competitor Analysis](#Competitor-Analysis)
+  - [Dashboard Demo](#Dashboard-Demo)
+  - Dashboard details & analysis into:
+    - Relationship between age and listing prices with ACF
+    - Relationship between CPI and listing prices
+    - Concentration of property ownership in Neighbourhoods
+    - Best time of the year to operate an AirBnB
+
+- [Amenities Analysis](#Amenities-Analysis)
+  - [Dashboard Demo](#Dashboard-Demo)
+  - Dashboard details & analysis into:
+    - Market Basket Analysis on Amenities Offered
+    - Identify amenities that people are willing to pay and how much more they will pay
+    - How breakfast offerings affects prices in neighbourhood with many attractions vs less attractions 
+
+- [Conclusion and Recommendations](#Conclusion-and-Recommendations)
+
 
 ## Introduction
 Running an Airbnb has always fascinated me, and Seattle's vibrant atmosphere and proximity to nature further piqued my interest. This led to the motivation behind this project: to gain a comprehensive understanding of the Airbnb market in the city. The primary objective of this data analytics project is to analyze the Airbnb market in Seattle and provide valuable insights for potential hosts and travelers.
@@ -17,7 +50,7 @@ The resulting interactive visualization will serve as a valuable tool for both c
 
 Additionally, a sentiment analysis segement to analyze guest experience through text mining of guest reviews has been conducted to understand the factors affecting the overall guest experience.
 
-## Data
+### Data
 - AirBnB data was sourced from [Kaggle](https://www.kaggle.com/datasets/airbnb/seattle)
 - Data on all attractions in Seattle was extracted with the Foursquare API
 - CPI data was sourced from [Federal Reserve Economic Data (FRED)](https://fred.stlouisfed.org/)
@@ -25,7 +58,7 @@ Additionally, a sentiment analysis segement to analyze guest experience through 
 ## Neighbourhood Analysis
 The objective of this dashboard was to provide a comprehensive yet broad overview into different neighbourhoods in Seattle. 
 
-Dashboard Demo:
+### Dashboard Demo:
 
 ![Neighbourhoods Dashboard Demo](images/neighbourhood_db.gif)
 
@@ -71,7 +104,7 @@ Based on prior travelling experience, a dissapointing situation as a tourist was
 ## Competitor Analysis
 This segment of the analysis concerns external market conditions, the relationship between CPI and listing prices, property ownership in Seattle's neighborhoods and the impact of time in terms of age and demand.
 
-Dashboard Demo:
+### Dashboard Demo:
 
 ![Competitor Dashboard Demo](images/competitor_analysis.gif)
 
@@ -102,7 +135,7 @@ While the low p-value indicates that there is a statistically significant relati
 
 ## Amenities Analysis:
 
-Dashboard Demo:
+### Dashboard Demo:
 ![Amenities Dashboard Demo](images/ammenities.gif)
 
 The objective of the amenitites dashboard was to identify the amenities that are most frequently offered, detect patterns in ammenities offered, highlight those that people are willing to pay for and understand roughly how much more it is that they are willing to pay.
@@ -142,5 +175,6 @@ What neighbourhoods to operate in?
 | West Seattle            | Like Downtown, listing prices and quantity of listings have been increasing since 2011. Although there are not as much attractions in this neighbourhood, most of the attractions are not dissapointing and a large portion belong to the realm of nature. That said, attraction-density wise, it is among the worst. Therefore, a good way to differentiate would be through providing breakfast or a stocked kitchen. Market saturation wise, only 1 host in West Seattle owns more than 10 listings, which is relatively acceptable compared to University District.   | Above median price of $101 in the summer and $80 during other seasons, also depends on accomodation capacity |
 | Queen Anne            | Listing prices have fallen as the quantity of listings on the market increased.  Market saturation wise, only 2 hosts in Queen Anne owns more than 10 listings, which is relatively acceptable compared to University District. That said, there are a 26 owning between  4 to 6 listings. Attraction density wise, the listings in this neighbourhood has between 18 to 48 attractions within 300m and has around 200 attractions as well. Highly rated attractions have a good mix of restraunts with cultural diverity, parks and outdoorsy places, making it a fun place tourists will gravitate to. | Above median price of $119 in the summer and $80 during other seasons |
 
-What ammenities to offer?
+What ammenities to offer? <br>
+
 Across all neighbourhoods, it seems like there are already plenty of apartments in the market. I think a condominium that has a doorman,access to a pool and gym will be good to fetch higher prices. Offering breakfast in Downtown and Queen Anne can also fetch higher prices however is not really worth it in West Seattle unless the listing is situated somewhere inaccessible. 
