@@ -2,6 +2,39 @@
 [interactive visualization tool](https://public.tableau.com/app/profile/nahyy4315/viz/CuratingthebestairbnbinSeattle/Geospatialanalysis)
 (please hover over the parts of the viz which might not be displaying properly due to versioning incompatibilities)
 
+## Contents Page
+
+- [Introduction](#introduction)
+  - [Data](#data)
+- [Neighbourhood Analysis](#Neighbourhood-Analysis)
+  - [Dashboard Demo](#Dashboard-Demo)
+  - Dashboard details & analysis into:
+    - Most influential factor impacting price
+    - Relationship between most influential factor and price
+
+- [Geospatial Analysis](#Geospatial-Analysis)
+  - [Dashboard Demo]()
+  - Dashboard details & analysis into:
+    - Neighbourhoods ranked based on price, rating and popularity metrics in foursquare
+    - Dissapointing listings in Neighbourhoods
+          
+- [Competitor Analysis](#Competitor-Analysis)
+  - [Dashboard Demo](#Dashboard-Demo)
+  - Dashboard details & analysis into:
+    - Relationship between age and listing prices with ACF
+    - Relationship between CPI and listing prices
+    - Concentration of property ownership in Neighbourhoods
+    - Best time of the year to operate an AirBnB
+
+- [Amenities Analysis](#Amenities-Analysis)
+  - [Dashboard Demo](#Dashboard-Demo)
+  - Dashboard details & analysis into:
+    - Market Basket Analysis on Amenities Offered
+    - Identify amenities that people are willing to pay and how much more they will pay
+    - How breakfast offerings affects prices in neighbourhood with many attractions vs less attractions 
+
+- [Conclusion and Recommendations](#Conclusion-and-Recommendations)
+
 
 ## Introduction
 Running an Airbnb has always fascinated me, and Seattle's vibrant atmosphere and proximity to nature further piqued my interest. This led to the motivation behind this project: to gain a comprehensive understanding of the Airbnb market in the city. The primary objective of this data analytics project is to analyze the Airbnb market in Seattle and provide valuable insights for potential hosts and travelers.
@@ -17,18 +50,18 @@ The resulting interactive visualization will serve as a valuable tool for both c
 
 Additionally, a sentiment analysis segement to analyze guest experience through text mining of guest reviews has been conducted to understand the factors affecting the overall guest experience.
 
-## Data
+### Data
 - AirBnB data was sourced from [Kaggle](https://www.kaggle.com/datasets/airbnb/seattle)
 - Data on all attractions in Seattle was extracted with the Foursquare API
 - CPI data was sourced from [Federal Reserve Economic Data (FRED)](https://fred.stlouisfed.org/)
 
 ## Neighbourhood Analysis
 The objective of this dashboard was to provide a comprehensive yet broad overview into different neighbourhoods in Seattle. 
+<br>
 
-Dashboard Demo:
-
+### Dashboard Demo:
 ![Neighbourhoods Dashboard Demo](images/neighbourhood_db.gif)
-
+<br>
 The first revelation is that neighbourhoods that with above median prices are typically on the western side of Seattle. On the other hand, the cheaper neighbourhoods are on the innerside of the city . 
 
 <div style="display: flex; flex-direction: row;">
@@ -53,6 +86,11 @@ Digging deeper to understand how the number of people a listing accomodates, we 
 <img src="images/accom_price_correlation.png" alt="accommodation distribution">
 
 ## Geospatial Analysis:
+<br>
+
+### Dashboard Demo:
+![Geospatial Dashboard Demo](images/geospatial_db.gif)
+<br>
 Attractions data extracted from the Foursquare API included other insightful information like:  
 | Field       | Description                                                                                                             |
 |-------------|-------------------------------------------------------------------------------------------------------------------------|
@@ -70,11 +108,11 @@ Based on prior travelling experience, a dissapointing situation as a tourist was
 
 ## Competitor Analysis
 This segment of the analysis concerns external market conditions, the relationship between CPI and listing prices, property ownership in Seattle's neighborhoods and the impact of time in terms of age and demand.
+<br>
 
-Dashboard Demo:
-
+### Dashboard Demo:
 ![Competitor Dashboard Demo](images/competitor_analysis.gif)
-
+<br>
 The relationship between age and listing prices was determined with Autocorrelation Function (ACF) after outliers in prices were removed and the data is smoothed with low pass filters. The ACF plot does show a positive correlation between the prices at different lags. This suggests that the prices tend to be similar over time. This may be due to a number of factors, such as the fact that Airbnb listings are often priced based on the same factors, such as the location and amenities of the listing.
 
 ![Alt text](images/ACF.png)
@@ -101,45 +139,47 @@ While the low p-value indicates that there is a statistically significant relati
 
 
 ## Amenities Analysis:
+<br>
 
-Dashboard Demo:
-![Amenities Dashboard Demo](images/ammenities.gif)
-
+### Dashboard Demo:
+![Amenities Dashboard Demo](images/amenities_db.gif)
+<br>
 The objective of the amenitites dashboard was to identify the amenities that are most frequently offered, detect patterns in ammenities offered, highlight those that people are willing to pay for and understand roughly how much more it is that they are willing to pay.
 
-The dashboard makes use of market basket analysis to identify the amenities that are most frequently offered and detect ammenities often offered in conjuction. This visualization makes use of sets, calculated fields and association rules.
+The dashboard makes use of market basket analysis to identify the amenities that are most frequently offered and detect amenities often offered in conjuction. This visualization makes use of sets, calculated fields and association rules.
 
-The figure below shows the top 2 most frequently offered ammenities are kitchen (12.18%) and heating (12.82%) and they often exist within a listing together,
+The figure below shows the top 2 most frequently offered amenities are kitchen (12.18%) and heating (12.82%) and they often exist within a listing together. <br>
 ![Alt text](images/kitchen_mba.png)
 
-To identify the amenities that people are willing to pay for, a Chi Square test was conducted. As seen below, kitchen, pool, tv, doorman, heating and gym are ammenities with the highest Chi Square result and p-values. These ammenities seem to be offered in specific property types like how only condominiums have ammenities like doorman, pool and gym.
-
+To identify the amenities that people are willing to pay for, a Chi Square test was conducted. As seen below, kitchen, pool, tv, doorman, heating and gym are amenities with the highest Chi Square result and p-values.These amenities seem to be offered in specific property types like how only condominiums have amenities like doorman, pool and gym.
+<br>
 ![Alt text](images/Amenity_chi.png)
+<br>
+In order to identify and quantify the impact of amenities on the median price of a selected property type, the dashboard applies proportional brushing.
 
-In order to identify and quantify the impact of ammenities on the median price of a selected property type, the dashboard applies proportional brushing.
-
-Taking apartments for example, the visualisation below reveals the different ammenities that contribute to prices. Lisitings with doorman ammenities fetch a median price of $170, those with a pool fetch a median price of $150, those with a gym fetch a median price of $145. These ammenities are rare and non-essentials, reflective of a more luxurious listing. 
+Taking apartments for example, the visualisation below reveals the different amenities that contribute to prices. Lisitings with doorman amenities fetch a median price of $170, those with a pool fetch a median price of $150, those with a gym fetch a median price of $145. These amenities are rare and non-essentials, reflective of a more luxurious listing. 
 ![Alt text](images/ammenities_tiers.png)
 
-On the other hand, apartments with breakfast included have the lowest median prices at $85 an interesting point for futher investigation. The breakdown of listings offering breakfast across neighbourhoods and property types can be seen below. Breakfast is often offered in houses, mostly in Central area and Rainer Valley. Since these neighbourhoods are quite drastic in terms of the number of attractions, it could be interesting to analyze the impact of breakfast on prices. 
+On the other hand, apartments with breakfast included have the lowest median prices at $85 an interesting point for futher investigation. The breakdown of listings offering breakfast across neighbourhoods and property types can be seen below. Breakfast is often offered in houses, mostly in Central area and Rainer Valley. Given that these neighbourhoods are quite drastic in terms of the number of attractions, we can investigate how breakfast offerings affects prices.
 
 <div style="display: flex; flex-direction: row;">
     <img src="images/breakfast.png" alt="change in qty available" width="500" />
     <img src="images/attractionsquantityneighbourhood.png" alt="change in price" width="500" />
 </div>
 
-Prices are dividied by the number of people the listing accomodates to isolate prices from the relationship with accomodation. The below histogram visualizing the distribution of prices shows that breakfast is cheaper in Rainer Valley than Capitol Hill, despite Capitol Hill having more attractions and places to visit for breakfast. This shows the demand for breakfasts exists as it actually value adds to the guest experience and guests are willing to pay more for the ammenity. On the other side, breakfast is offered more frequently in cheaper listings in Rainer Hill as 8 listings offering breakfast are the cheapest, meaning that it is offered as a function of convenience due to the lack of attractions nearby. 
+Prices are dividied by the number of people the listing accomodates to isolate prices from the relationship with accomodation. The below histogram visualizing the distribution of prices shows that listings offering breakfast are cheaper in Rainer Valley than Capitol Hill, despite Capitol Hill having more attractions and places to visit for breakfast. This shows the demand for breakfasts exists as it actually value adds to the guest experience and guests are willing to pay more for the amenity. On the other side, breakfast is offered more frequently in cheaper listings in Rainer Hill as 8 listings offering breakfast are the cheapest, this likely is the case as breakfast is offered as a function of convenience due to the lack of attractions nearby. <br>
 ![Alt text](images/rainervscapitol.png)
 
 ## Conclusion and Recommendations
 
-What neighbourhoods to operate in? 
+What neighbourhoods to operate in? <br>
 
 | Shortlisted Neighborhoods | Rationale | Prices to Charge |
 |---------------------------|-----------|------------------------|
-| Downtown         | Listing prices have been increasing since 2011. The airbnb market has also been growing with more offering their place up for rent. Many attractions all over the city makes it an attractive neighbourhood for tourists. Competition for AirBnB listings seems to be low, with less commercialized hosts.  | Above median price of $150 in the summer and $100 during other seasons          |
-| Neighborhood 2            | Reason 2  | $Y                     |
-| Neighborhood 3            | Reason 3  | $Z                     |
+| Downtown         | Listing prices have been increasing since 2011. The airbnb market has also been growing with more offering their place up for rent. Many attractions all over the neighbourhood makes it an attractive neighbourhood for tourists. Market saturation wise, there are less commercialized hosts, differentiation can easily be done through provision of breakfast or lowered cleaning fees.  | Above median price of $150 in the summer and $100 during other seasons |
+| West Seattle            | Like Downtown, listing prices and quantity of listings have been increasing since 2011. Although there are not as much attractions in this neighbourhood, most of the attractions are not dissapointing and a large portion belong to the realm of nature. That said, attraction-density wise, it is among the worst. Therefore, a good way to differentiate would be through providing breakfast or a stocked kitchen. Market saturation wise, only 1 host in West Seattle owns more than 10 listings, which is relatively acceptable compared to University District.   | Above median price of $101 in the summer and $80 during other seasons, also depends on accomodation capacity |
+| Queen Anne            | Listing prices have fallen as the quantity of listings on the market increased.  Market saturation wise, only 2 hosts in Queen Anne owns more than 10 listings, which is relatively acceptable compared to University District. That said, there are a 26 owning between  4 to 6 listings. Attraction density wise, the listings in this neighbourhood has between 18 to 48 attractions within 300m and has around 200 attractions as well. Highly rated attractions have a good mix of restraunts with cultural diverity, parks and outdoorsy places, making it a fun place tourists will gravitate to. | Above median price of $119 in the summer and $80 during other seasons |
 
-What ammenities to offer?
+What amenities to offer? <br>
 
+Across all neighbourhoods, it seems like there are already plenty of apartments in the market. I think a condominium that has a doorman,access to a pool and gym will be good to fetch higher prices. Offering breakfast in Downtown and Queen Anne can also fetch higher prices however it is not really worth it in West Seattle unless the listing is situated somewhere inaccessible since it is less touristy and people are not as willing to pay more. 
