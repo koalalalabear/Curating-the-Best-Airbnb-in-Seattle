@@ -29,6 +29,8 @@
     - Identify Amenities That People Are Willing to Pay for and How Much More They Will Pay
     - How Breakfast Offerings Affect Prices in Neighbourhoods with Many Attractions vs. Less Attractions
 - [Conclusion and Recommendations](#conclusion-and-recommendations)
+    - [Future Work](#future-work)
+
 
 ## Introduction
 Running an Airbnb has always fascinated me, and Seattle's vibrant atmosphere and proximity to nature further piqued my interest. This led to the motivation behind this project: to gain a comprehensive understanding of the Airbnb market in the city. The primary objective of this data analytics project is to analyze the Airbnb market in Seattle and provide valuable insights for potential hosts and travelers.
@@ -171,3 +173,7 @@ What neighbourhoods to operate in?
 What amenities to offer? <br>
 
 Across all neighbourhoods, it seems like there are already plenty of apartments in the market. I think a condominium that has a doorman,access to a pool and gym will be good to fetch higher prices. Offering breakfast in Downtown and Queen Anne can also fetch higher prices however it is not really worth it in West Seattle unless the listing is situated somewhere inaccessible since it is less touristy and people are not as willing to pay more. 
+
+## Future Work
+
+Further analysis can be done into understanding what makes a great host, accessibility / transit of listings and guest sentiment analysis into reviews.
