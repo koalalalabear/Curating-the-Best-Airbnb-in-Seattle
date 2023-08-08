@@ -109,7 +109,7 @@ The objective of the amenitites dashboard was to identify the amenities that are
 
 The dashboard makes use of market basket analysis to identify the amenities that are most frequently offered and detect ammenities often offered in conjuction. This visualization makes use of sets, calculated fields and association rules.
 
-The figure below shows the top 2 most frequently offered ammenities are kitchen (12.18%) and heating (12.82%) and they often exist within a listing together,
+The figure below shows the top 2 most frequently offered ammenities are kitchen (12.18%) and heating (12.82%) and they often exist within a listing together. <br>
 ![Alt text](images/kitchen_mba.png)
 
 To identify the amenities that people are willing to pay for, a Chi Square test was conducted. As seen below, kitchen, pool, tv, doorman, heating and gym are ammenities with the highest Chi Square result and p-values.These ammenities seem to be offered in specific property types like how only condominiums have ammenities like doorman, pool and gym.
