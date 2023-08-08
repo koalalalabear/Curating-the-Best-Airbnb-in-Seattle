@@ -140,18 +140,18 @@ While the low p-value indicates that there is a statistically significant relati
 
 The objective of the amenitites dashboard was to identify the amenities that are most frequently offered, detect patterns in ammenities offered, highlight those that people are willing to pay for and understand roughly how much more it is that they are willing to pay.
 
-The dashboard makes use of market basket analysis to identify the amenities that are most frequently offered and detect ammenities often offered in conjuction. This visualization makes use of sets, calculated fields and association rules.
+The dashboard makes use of market basket analysis to identify the amenities that are most frequently offered and detect amenities often offered in conjuction. This visualization makes use of sets, calculated fields and association rules.
 
-The figure below shows the top 2 most frequently offered ammenities are kitchen (12.18%) and heating (12.82%) and they often exist within a listing together. <br>
+The figure below shows the top 2 most frequently offered amenities are kitchen (12.18%) and heating (12.82%) and they often exist within a listing together. <br>
 ![Alt text](images/kitchen_mba.png)
 
-To identify the amenities that people are willing to pay for, a Chi Square test was conducted. As seen below, kitchen, pool, tv, doorman, heating and gym are ammenities with the highest Chi Square result and p-values.These ammenities seem to be offered in specific property types like how only condominiums have ammenities like doorman, pool and gym.
+To identify the amenities that people are willing to pay for, a Chi Square test was conducted. As seen below, kitchen, pool, tv, doorman, heating and gym are amenities with the highest Chi Square result and p-values.These amenities seem to be offered in specific property types like how only condominiums have amenities like doorman, pool and gym.
 <br>
 ![Alt text](images/Amenity_chi.png)
 <br>
-In order to identify and quantify the impact of ammenities on the median price of a selected property type, the dashboard applies proportional brushing.
+In order to identify and quantify the impact of amenities on the median price of a selected property type, the dashboard applies proportional brushing.
 
-Taking apartments for example, the visualisation below reveals the different ammenities that contribute to prices. Lisitings with doorman ammenities fetch a median price of $170, those with a pool fetch a median price of $150, those with a gym fetch a median price of $145. These ammenities are rare and non-essentials, reflective of a more luxurious listing. 
+Taking apartments for example, the visualisation below reveals the different amenities that contribute to prices. Lisitings with doorman amenities fetch a median price of $170, those with a pool fetch a median price of $150, those with a gym fetch a median price of $145. These amenities are rare and non-essentials, reflective of a more luxurious listing. 
 ![Alt text](images/ammenities_tiers.png)
 
 On the other hand, apartments with breakfast included have the lowest median prices at $85 an interesting point for futher investigation. The breakdown of listings offering breakfast across neighbourhoods and property types can be seen below. Breakfast is often offered in houses, mostly in Central area and Rainer Valley. Given that these neighbourhoods are quite drastic in terms of the number of attractions, we can investigate how breakfast offerings affects prices.
@@ -161,8 +161,7 @@ On the other hand, apartments with breakfast included have the lowest median pri
     <img src="images/attractionsquantityneighbourhood.png" alt="change in price" width="500" />
 </div>
 
-Prices are dividied by the number of people the listing accomodates to isolate prices from the relationship with accomodation. The below histogram visualizing the distribution of prices shows that listings offering breakfast are cheaper in Rainer Valley than Capitol Hill, despite Capitol Hill having more attractions and places to visit for breakfast. This shows the demand for breakfasts exists as it actually value adds to the guest experience and guests are willing to pay more for the ammenity. On the other side, breakfast is offered more frequently in cheaper listings in Rainer Hill as 8 listings offering breakfast are the cheapest, this likely is the case as breakfast is offered as a function of convenience due to the lack of attractions nearby. <br>
-
+Prices are dividied by the number of people the listing accomodates to isolate prices from the relationship with accomodation. The below histogram visualizing the distribution of prices shows that listings offering breakfast are cheaper in Rainer Valley than Capitol Hill, despite Capitol Hill having more attractions and places to visit for breakfast. This shows the demand for breakfasts exists as it actually value adds to the guest experience and guests are willing to pay more for the amenity. On the other side, breakfast is offered more frequently in cheaper listings in Rainer Hill as 8 listings offering breakfast are the cheapest, this likely is the case as breakfast is offered as a function of convenience due to the lack of attractions nearby. <br>
 ![Alt text](images/rainervscapitol.png)
 
 ## Conclusion and Recommendations
@@ -175,6 +174,6 @@ What neighbourhoods to operate in?
 | West Seattle            | Like Downtown, listing prices and quantity of listings have been increasing since 2011. Although there are not as much attractions in this neighbourhood, most of the attractions are not dissapointing and a large portion belong to the realm of nature. That said, attraction-density wise, it is among the worst. Therefore, a good way to differentiate would be through providing breakfast or a stocked kitchen. Market saturation wise, only 1 host in West Seattle owns more than 10 listings, which is relatively acceptable compared to University District.   | Above median price of $101 in the summer and $80 during other seasons, also depends on accomodation capacity |
 | Queen Anne            | Listing prices have fallen as the quantity of listings on the market increased.  Market saturation wise, only 2 hosts in Queen Anne owns more than 10 listings, which is relatively acceptable compared to University District. That said, there are a 26 owning between  4 to 6 listings. Attraction density wise, the listings in this neighbourhood has between 18 to 48 attractions within 300m and has around 200 attractions as well. Highly rated attractions have a good mix of restraunts with cultural diverity, parks and outdoorsy places, making it a fun place tourists will gravitate to. | Above median price of $119 in the summer and $80 during other seasons |
 
-What ammenities to offer? <br>
+What amenities to offer? <br>
 
-Across all neighbourhoods, it seems like there are already plenty of apartments in the market. I think a condominium that has a doorman,access to a pool and gym will be good to fetch higher prices. Offering breakfast in Downtown and Queen Anne can also fetch higher prices however is not really worth it in West Seattle unless the listing is situated somewhere inaccessible. 
+Across all neighbourhoods, it seems like there are already plenty of apartments in the market. I think a condominium that has a doorman,access to a pool and gym will be good to fetch higher prices. Offering breakfast in Downtown and Queen Anne can also fetch higher prices however it is not really worth it in West Seattle unless the listing is situated somewhere inaccessible since it is less touristy and people are not as willing to pay more. 
