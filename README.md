@@ -99,14 +99,18 @@ Based on prior travel experiences, a disappointing situation as a tourist is whe
 
 ![Alt text](images/disapointmentboxplot.png)
 
+For geospatial analysis of attraction density of listings in neighbourhoods and to identify the types of highly rated attractions nearby, the below dashboard was created: 
+
+![Geospatial Dashboard Demo](images/geospatial_db.gif)
+
+For this visualization, a parameter for the radial distance was created (p-distance). I utilized various Tableau spatial functions (Buffer, MakePoint, Distance) as part of an interactive geospatial analysis to identify the number of Venues within p-distance, implementing spatial joins using join calculations, dynamic buffers with p-distance parameter, creating an in-range calculation to format venuew points within 1km as to be green.
+
 ## Competitor Analysis
 This segment of the analysis addresses external market conditions, the relationship between CPI and listing prices, property ownership in Seattle's neighborhoods, and the impact of time in terms of age and demand.
 
 ### Dashboard Demo:
 
 ![Competitor Dashboard Demo](images/competitor_analysis.gif)
-
-For this visualization, a parameter for the radial distance was created (p-distance). I utilized various Tableau spatial functions (Buffer, MakePoint, Distance) as part of an interactive geospatial analysis to identify the number of Venues within p-distance, implementing spatial joins using join calculations, dynamic buffers with p-distance parameter, creating an in-range calculation to format venuew points within 1km as to be green.
 
 The relationship between age and listing prices was determined with Autocorrelation Function (ACF) after outliers in prices were removed and the data is smoothed with low pass filters. The ACF plot does show a positive correlation between the prices at different lags. This suggests that the prices tend to be similar over time. This may be due to a number of factors, such as the fact that Airbnb listings are often priced based on the same factors, such as the location and amenities of the listing.
 
