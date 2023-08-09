@@ -156,7 +156,7 @@ To identify amenities that guests are willing to pay for, a Chi-Square test was 
 ![Alt text](images/Amenity_chi.png)
 <br>
 For assessing the impact of amenities on the median price of a selected property type, the dashboard employs proportional brushing. Taking apartments as an example, the visualization below presents various amenities contributing to prices. Listings with doorman amenities command a median price of $170, while those with a pool have a median price of $150, and those with a gym have a median price of $145. These amenities are relatively rare and non-essential, indicative of more luxurious listings.
-
+<br>
 ![Alt text](images/ammenities_tiers.png)
 
 Conversely, apartments that offer breakfast have the lowest median prices at $85—an interesting point for further investigation. The distribution of breakfast offerings across neighborhoods and property types is depicted below. Breakfast is frequently offered in houses, predominantly in the Central area and Rainier Valley. Given the considerable disparity in the number of attractions between these neighborhoods, it is worth exploring how breakfast offerings impact prices.
