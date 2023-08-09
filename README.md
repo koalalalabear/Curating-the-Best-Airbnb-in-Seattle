@@ -148,14 +148,15 @@ The objective of the amenities dashboard is to identify the most frequently offe
 
 The dashboard utilizes market basket analysis to identify commonly offered amenities and detect frequently paired amenities. This visualization employs calculated fields, association rules, sets and set actions.
 
-The figure below displays the top 2 most frequently offered amenities: kitchen (12.18%) and heating (12.82%), often present together within a listing.
+The figure below displays the top 2 most frequently offered amenities: kitchen (12.18%) and heating (12.82%), often present together within a listing.<br>
+
 ![Alt text](images/kitchen_mba.png)
 
 To identify amenities that guests are willing to pay for, a Chi-Square test was conducted. As illustrated below, amenities such as kitchen, pool, TV, doorman, heating, and gym demonstrate the highest Chi-Square results and p-values. These amenities appear to be specific to certain property types; for example, only condominiums offer amenities like doorman, pool, and gym. <br>
 
 ![Alt text](images/Amenity_chi.png)
 <br>
-For assessing the impact of amenities on the median price of a selected property type, the dashboard employs proportional brushing. Taking apartments as an example, the visualization below presents various amenities contributing to prices. Listings with doorman amenities command a median price of $170, while those with a pool have a median price of $150, and those with a gym have a median price of $145. These amenities are relatively rare and non-essential, indicative of more luxurious listings.
+For assessing the impact of amenities on the median price of a selected property type, the dashboard employs proportional brushing. Taking apartments as an example, the visualization below presents various amenities contributing to prices. Listings with doorman amenities command a median price of $170, while those with a pool have a median price of $150, and those with a gym have a median price of $145. These amenities are relatively rare and non-essential, indicative of more luxurious listings. 
 <br>
 ![Alt text](images/ammenities_tiers.png)
 
