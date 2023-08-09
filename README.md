@@ -101,9 +101,11 @@ Based on prior travel experiences, a disappointing situation as a tourist is whe
 
 For geospatial analysis of attraction density of listings in neighbourhoods and to identify the types of highly rated attractions nearby, the below dashboard was created: 
 
+### Dashboard Demo:
+
 ![Geospatial Dashboard Demo](images/geospatial_db.gif)
 
-For this visualization, a parameter for the radial distance was created (p-distance). I utilized various Tableau spatial functions (Buffer, MakePoint, Distance) as part of an interactive geospatial analysis to identify the number of Venues within p-distance, implementing spatial joins using join calculations, dynamic buffers with p-distance parameter, creating an in-range calculation to format venuew points within 1km as to be green.
+For this visualization, a parameter for the radial distance was created (p-distance). I utilized various Tableau spatial functions (Buffer, MakePoint, Distance) as part of an interactive geospatial analysis to identify the number of Venues within p-distance, implementing spatial joins using join calculations, dynamic buffers with p-distance parameter, creating an in-range calculation to format venuew points within 1km as to be dark green dots.The tooltip also includes a hoverover visualization of the types of attraction within 1km of the listing, categorised by Foursquare price ranks.
 
 ## Competitor Analysis
 This segment of the analysis addresses external market conditions, the relationship between CPI and listing prices, property ownership in Seattle's neighborhoods, and the impact of time in terms of age and demand.
